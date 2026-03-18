@@ -12,8 +12,8 @@ import {
 import { Show } from '@preact/signals/utils';
 import { type FunctionComponent, render } from 'preact';
 import { useEffect, useRef, useState } from 'preact/hooks';
-import type { LoaderConfig, Playback } from '../src/types.ts';
-import { VbrickPlaybackLoader } from '../src/vbrick-loader.ts';
+import type { LoaderConfig, Playback } from '../lib/types.ts';
+import { VbrickPlaybackLoader } from '../lib/vbrick-loader.ts';
 
 const DEFAULT_VALUES = {
     vbrickUrl: import.meta.env.VITE_VBRICK_URL || '',

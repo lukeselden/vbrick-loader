@@ -38,7 +38,6 @@
         "noUncheckedSideEffectImports": true
     },
     "include": [
-        "src",
-        "demo"
+        "src"
     ]
 }

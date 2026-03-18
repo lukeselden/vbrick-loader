@@ -50,7 +50,7 @@ interface PlaybackUrlResult {
   streamDeliveryType: 'PublicCDN' | 'ECDN' | 'Custom';
 }
 //#endregion
-//#region src/types.d.ts
+//#region src/lib/types.d.ts
 interface LoaderConfig {
   vbrickUrl: string | URL;
   accountId?: string;
@@ -176,7 +176,7 @@ declare class VbrickPlaybackLoader {
   destroy(): void;
 }
 //#endregion
-//#region src/vbrick-loader.d.ts
+//#region src/lib/vbrick-loader.d.ts
 declare function loadPlaybacks(videoEl: HTMLVideoElement, videoId: string, config: LoaderConfig, attachOptions?: AttachOptions): Promise<VbrickPlaybackLoader>;
 //#endregion
 export { type AccountBasicInfo, type LoaderConfig, type PlaybackUrlResult, type PlaybackUrlsResponse, type VbrickData, VbrickPlaybackLoader, VbrickPublicClient, type VideoInfo, loadPlaybacks };

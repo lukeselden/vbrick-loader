@@ -1,11 +1,11 @@
+import { AnalyticsBus } from './analytics-bus.ts';
 import type {
     AttachOptions,
     LoaderConfig,
     Playback,
     VbrickData,
     VideoInfo,
-} from '../types.ts';
-import { AnalyticsBus } from './analytics-bus.ts';
+} from './types.ts';
 import { asPlayback } from './utils.ts';
 import { VbrickPublicClient } from './vbrick-client.ts';
 

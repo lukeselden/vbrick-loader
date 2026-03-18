@@ -1,4 +1,4 @@
-import type { PlaybackUrlResult } from './lib/vbrick-types.ts';
+import type { PlaybackUrlResult } from './vbrick-types.ts';
 
 export interface LoaderConfig {
     vbrickUrl: string | URL;

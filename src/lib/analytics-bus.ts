@@ -1,5 +1,5 @@
-import type { VbrickData } from '../types.ts';
 import { bufferMessages, type IMessageBuffer } from './message-buffer.ts';
+import type { VbrickData } from './types.ts';
 import { generateSessionId, refreshSessionId } from './utils.ts';
 import type { VbrickPublicClient } from './vbrick-client.ts';
 import type { PlaybackUrlResult } from './vbrick-types.ts';

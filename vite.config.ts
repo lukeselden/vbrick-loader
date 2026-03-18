@@ -3,15 +3,16 @@ import preact from '@preact/preset-vite';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-    root: 'dist',
+    root: 'src/demo',
     base: '/vbrick-loader',
     envDir: import.meta.dirname,
     build: {
-        outDir: resolve(import.meta.dirname, 'dist/demo'),
+        outDir: resolve(import.meta.dirname, 'demo'),
+        emptyOutDir: true,
         rolldownOptions: {
             tsconfig: 'tsconfig.demo.json',
             input: {
-                main: resolve(import.meta.dirname, 'demo/index.html'),
+                main: resolve(import.meta.dirname, 'src/demo/index.html'),
                 // example is intended for local development rather than building
                 // example: resolve(import.meta.dirname, 'demo/example.html'),
             },

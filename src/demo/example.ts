@@ -1,6 +1,6 @@
 import './style.css';
-import type { LoaderConfig } from '../src/types.ts';
-import { loadPlaybacks, VbrickPlaybackLoader } from '../src/vbrick-loader.ts';
+import type { LoaderConfig } from '../lib/types.ts';
+import { loadPlaybacks, VbrickPlaybackLoader } from '../lib/vbrick-loader.ts';
 
 const vbrickUrl =
     import.meta.env.VITE_VBRICK_URL || 'https://company.rev.vbrick.com';

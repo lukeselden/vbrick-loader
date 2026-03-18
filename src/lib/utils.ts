@@ -1,4 +1,4 @@
-import type { Playback } from '../types.ts';
+import type { Playback } from './types.ts';
 import type { PlaybackUrlResult } from './vbrick-types.ts';
 
 export function asPlayback(info: PlaybackUrlResult): Playback {
