@@ -4,7 +4,7 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
     root: 'src/demo',
-    base: '/vbrick-loader',
+    base: '/vbrick-loader/demo',
     envDir: import.meta.dirname,
     build: {
         outDir: resolve(import.meta.dirname, 'demo'),
