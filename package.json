@@ -1,0 +1,33 @@
+{
+  "name": "vbrick-loader",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "license": "MIT",
+  "author": {
+    "name": "Luke Selden",
+    "email": "luke.selden@vbrick.com"
+  },
+  "main": "dist/vbrick-loader.js",
+  "scripts": {
+    "watch": "tsdown --watch",
+    "build": "tsdown",
+    "dev": "vite",
+    "preview": "vite preview",
+    "build:demo": "tsc && vite build",
+    "build:both": "npm run build && npm run build:demo"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.4.4",
+    "@preact/preset-vite": "^2.10.4",
+    "@preact/signals": "^2.8.2",
+    "@types/node": "^25.5.0",
+    "preact": "^10.29.0",
+    "tsdown": "^0.21.4",
+    "typescript": "~5.9.3",
+    "vite": "npm:rolldown-vite@7.1.14"
+  },
+  "overrides": {
+    "vite": "npm:rolldown-vite@7.1.14"
+  }
+}

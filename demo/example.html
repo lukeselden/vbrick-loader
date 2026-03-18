@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>vbrick-playback</title>
+    </head>
+    <body>
+        <div id="example1">
+            <h1>Example 1 - auto append to existing element</h1>
+            <p>
+                NOTE: This uses vite to populate the <code>src</code> attribute
+                with <code>&#37;VITE_VBRICK_URL&#37;</code> and
+                <code>&#37;VITE_VIDEO_ID&#37;</code> values in the
+                <code>.env</code> file. Be sure to replace accordingly
+            </p>
+            <video autoplay controls loop muted playsinline preload="auto">
+                <source
+                    src="%VITE_VBRICK_URL%/api/v2/videos/%VITE_VIDEO_ID%/download"
+                    type="video/mp4"
+                />
+                Sorry, your browser doesn't support embedded videos.
+            </video>
+        </div>
+        <fieldset id="example2">
+            <legend>Example Two</legend>
+            <input
+                type="checkbox"
+                id="exampleTwoCheck"
+                class="toggle-checkbox"
+            />
+            <label for="exampleTwoCheck">Show Example Two</label>
+            <div class="hidden">
+                <h1>populate source based off of data-videoid</h1>
+                <video
+                    autoplay
+                    controls
+                    loop
+                    muted
+                    playsinline
+                    preload="auto"
+                    data-videoid="%VITE_VIDEO_ID%"
+                >
+                    Sorry, your browser doesn't support embedded videos.
+                </video>
+            </div>
+        </fieldset>
+        <fieldset id="example3">
+            <legend>Example Three</legend>
+            <div id="example3target">
+                Placeholder content to be replaced by video once loaded
+            </div>
+        </fieldset>
+        <script type="module" src="./example.ts"></script>
+    </body>
+</html>
