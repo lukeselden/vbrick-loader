@@ -12,7 +12,19 @@ export default defineConfig({
             tsconfig: 'tsconfig.demo.json',
             input: {
                 main: resolve(import.meta.dirname, 'demo/index.html'),
-                example: resolve(import.meta.dirname, 'demo/example.html'),
+                // example is intended for local development rather than building
+                // example: resolve(import.meta.dirname, 'demo/example.html'),
+            },
+            output: {
+                entryFileNames(chunkInfo) {
+                    return 'assets/[name].js';
+                },
+                assetFileNames(chunkInfo) {
+                    return 'assets/[name][extname]';
+                },
+                chunkFileNames(chunkInfo) {
+                    return 'assets/[name].js';
+                },
             },
         },
     },
